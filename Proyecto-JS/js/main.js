@@ -1,49 +1,56 @@
 $(document).ready(function(){
 
-if(window.location.href.indexOf('index') > -1){
+	// Slider
+	if(window.location.href.indexOf('index') > -1){
 	  
-  $('.galeria').bxSlider({
-    mode: 'fade',
-    captions: true,
-    slideWidth: 1000
-  });
+	  $('.galeria').bxSlider({
+	    mode: 'fade',
+	    captions: false,
+	    slideWidth: 1200,
+	    responsive: true,
+	    pager: true
+	  });
 
-}
-  //Posts
-  if(window.location.href.indexOf('index') > -1){
-	  var posts = [
-	  {
-	  	title: "Prueba de titulo 1",
-	  	date: 'publicado el dia '+moment().date()+' de '+moment().format("MMMM")+" del "+moment().format("YYYY"),
-	  	content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-	  },
-	  {
-	  	title: "Prueba de titulo 2",
-	  	date: 'publicado el dia '+moment().date()+' de '+moment().format("MMMM")+" del "+moment().format("YYYY"),
-	  	content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-	  
-	  },
-	  {
-	  	title: "Prueba de titulo 3",
-	  	date: 'publicado el dia '+moment().date()+' de '+moment().format("MMMM")+" del "+moment().format("YYYY"),
-	  	content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-	  
-	  },
-	  {
-	  	title: "Prueba de titulo 4",
-	  	date: 'publicado el dia '+moment().date()+' de '+moment().format("MMMM")+" del "+moment().format("YYYY"),
-	  	content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-	  
-	  },
-	  {
-	  	title: "Prueba de titulo 5",
-	  	date: 'publicado el dia '+moment().date()+' de '+moment().format("MMMM")+" del "+moment().format("YYYY"),
-	  	content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-	  
-	  },
-  ];
-  posts.forEach((item, index) =>{
-  		var post = `
+	}
+
+
+	// Posts
+	if(window.location.href.indexOf('index') > -1){
+		var posts = [
+			{
+				title: 'Prueba de titulo 1',
+				date: 'Publicado el dia ' + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper justo. Fusce sapien nibh, tempor fermentum mauris ac, tincidunt maximus diam. Quisque bibendum sed dui sit amet euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse quam sem, scelerisque sit amet libero nec, congue blandit dolor. Aliquam a vehicula mi. Morbi id convallis dolor. Nulla eu libero nec nulla fermentum viverra quis at magna. Quisque rutrum augue nulla, bibendum viverra sapien viverra vel. Quisque malesuada ultrices felis eu porttitor.'
+			},
+			{
+				title: 'Prueba de titulo 2',
+				date: 'Publicado el dia ' + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper justo. Fusce sapien nibh, tempor fermentum mauris ac, tincidunt maximus diam. Quisque bibendum sed dui sit amet euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse quam sem, scelerisque sit amet libero nec, congue blandit dolor. Aliquam a vehicula mi. Morbi id convallis dolor. Nulla eu libero nec nulla fermentum viverra quis at magna. Quisque rutrum augue nulla, bibendum viverra sapien viverra vel. Quisque malesuada ultrices felis eu porttitor.'
+			},
+			{
+				title: 'Prueba de titulo 3',
+				date: 'Publicado el dia ' + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper justo. Fusce sapien nibh, tempor fermentum mauris ac, tincidunt maximus diam. Quisque bibendum sed dui sit amet euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse quam sem, scelerisque sit amet libero nec, congue blandit dolor. Aliquam a vehicula mi. Morbi id convallis dolor. Nulla eu libero nec nulla fermentum viverra quis at magna. Quisque rutrum augue nulla, bibendum viverra sapien viverra vel. Quisque malesuada ultrices felis eu porttitor.'
+			},
+			{
+				title: 'Prueba de titulo 4',
+				date: 'Publicado el dia ' + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper justo. Fusce sapien nibh, tempor fermentum mauris ac, tincidunt maximus diam. Quisque bibendum sed dui sit amet euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse quam sem, scelerisque sit amet libero nec, congue blandit dolor. Aliquam a vehicula mi. Morbi id convallis dolor. Nulla eu libero nec nulla fermentum viverra quis at magna. Quisque rutrum augue nulla, bibendum viverra sapien viverra vel. Quisque malesuada ultrices felis eu porttitor.'
+			},
+			{
+				title: 'Prueba de titulo 5',
+				date: 'Publicado el dia ' + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper justo. Fusce sapien nibh, tempor fermentum mauris ac, tincidunt maximus diam. Quisque bibendum sed dui sit amet euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse quam sem, scelerisque sit amet libero nec, congue blandit dolor. Aliquam a vehicula mi. Morbi id convallis dolor. Nulla eu libero nec nulla fermentum viverra quis at magna. Quisque rutrum augue nulla, bibendum viverra sapien viverra vel. Quisque malesuada ultrices felis eu porttitor.'
+			},
+			{
+				title: 'Prueba de titulo 6',
+				date: 'Publicado el dia ' + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper justo. Fusce sapien nibh, tempor fermentum mauris ac, tincidunt maximus diam. Quisque bibendum sed dui sit amet euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse quam sem, scelerisque sit amet libero nec, congue blandit dolor. Aliquam a vehicula mi. Morbi id convallis dolor. Nulla eu libero nec nulla fermentum viverra quis at magna. Quisque rutrum augue nulla, bibendum viverra sapien viverra vel. Quisque malesuada ultrices felis eu porttitor.'
+			},
+		];
+
+		posts.forEach((item, index) => {
+			var post = `
 				<article class="post">
 					<h2>${item.title}</h2>
 					<span class="date">${item.date}</span>
@@ -53,15 +60,13 @@ if(window.location.href.indexOf('index') > -1){
 					<a href="#" class="button-more">Leer más</a>
 				</article>
 			`;
-  		 
-  		
 
-  			$("#posts").append(post);
+			$("#posts").append(post);
+		});
+	}
 
-  		 
-  });
-}
-  // Selector de tema
+
+	// Selector de tema
 	var theme = $("#theme");
 
 	$("#to-green").click(function(){
@@ -76,6 +81,7 @@ if(window.location.href.indexOf('index') > -1){
 		theme.attr("href", "css/blue.css");
 	});
 
+	
 	// Scroll arriba de la web
 	$('.subir').click(function(e){
 		e.preventDefault();
@@ -95,7 +101,9 @@ if(window.location.href.indexOf('index') > -1){
 		localStorage.setItem("form_name", form_name);
 
 	});
+
 	var form_name = localStorage.getItem("form_name");
+
 	if(form_name != null && form_name != "undefined"){
 		var about_parrafo = $("#about p");
 
@@ -111,10 +119,13 @@ if(window.location.href.indexOf('index') > -1){
 
 	}
 
-	//Acordeon
+
+	// Acordeon
+
 	if(window.location.href.indexOf('about') > -1){
 		$("#acordeon").accordion();
 	}
+
 
 	// Reloj
 	if(window.location.href.indexOf('reloj') > -1){
@@ -127,8 +138,7 @@ if(window.location.href.indexOf('index') > -1){
 	
 	}
 
-
-// Validación
+	// Validación
 	if(window.location.href.indexOf('contact') > -1){
 	
 		$("form input[name='date']").datepicker({
@@ -142,4 +152,7 @@ if(window.location.href.indexOf('index') > -1){
 		});
 
 	}
+
+	
+
 });
