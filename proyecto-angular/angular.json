@@ -5,7 +5,11 @@
   "projects": {
     "proyecto-angular": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -24,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/styles.css",
+              "src/assets/bxslider/dist/jquery.bxslider.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/bxslider/dist/jquery.bxslider.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -88,7 +96,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -119,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "proyecto-angular"
+    }
+  },
+  "defaultProject": "proyecto-angular",
+  "cli": {
+    "analytics": "6e8615d2-71d6-4b61-9b35-306ea8f4d7f1"
+  }
 }
